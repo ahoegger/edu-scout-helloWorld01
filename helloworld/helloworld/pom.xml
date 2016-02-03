@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.eclipse.scout</groupId>
+    <artifactId>maven_rt_plugin_config-master</artifactId>
+    <version>2.0</version>
+    <relativePath></relativePath>
+  </parent>
+
+  <groupId>com.bsiag.edu.helloworld</groupId>
+  <artifactId>helloworld</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>My Application Parent Module</name>
+
+  <properties>
+    <com.bsiag.edu.helloworld.helloworld.version>${project.version}</com.bsiag.edu.helloworld.helloworld.version>
+    <jdk.source.version>1.8</jdk.source.version>
+    <org.eclipse.scout.rt_version>5.2.0.M4</org.eclipse.scout.rt_version>
+  </properties>
+
+  <modules>
+    <module>../helloworld.shared</module>
+    <module>../helloworld.server</module>
+    <module>../helloworld.client</module>
+    <module>../helloworld.server.app.war</module>
+    <module>../helloworld.ui.html</module>
+    <module>../helloworld.ui.html.app.war</module>
+  </modules>
+
+  <dependencyManagement>
+    <dependencies>
+      <!-- Scout Dependencies -->
+      <dependency>
+        <groupId>org.eclipse.scout.rt</groupId>
+        <artifactId>org.eclipse.scout.rt</artifactId>
+        <version>${org.eclipse.scout.rt_version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+      <!-- Application Dependencies -->
+      <dependency>
+        <groupId>com.bsiag.edu.helloworld</groupId>
+        <artifactId>helloworld.client</artifactId>
+        <version>${com.bsiag.edu.helloworld.helloworld.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.bsiag.edu.helloworld</groupId>
+        <artifactId>helloworld.shared</artifactId>
+        <version>${com.bsiag.edu.helloworld.helloworld.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.bsiag.edu.helloworld</groupId>
+        <artifactId>helloworld.server</artifactId>
+        <version>${com.bsiag.edu.helloworld.helloworld.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.bsiag.edu.helloworld</groupId>
+        <artifactId>helloworld.ui.html</artifactId>
+        <version>${com.bsiag.edu.helloworld.helloworld.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>
