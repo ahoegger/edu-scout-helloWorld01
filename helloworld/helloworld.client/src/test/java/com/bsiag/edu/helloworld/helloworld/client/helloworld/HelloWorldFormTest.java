@@ -62,4 +62,9 @@ public class HelloWorldFormTest {
 
     Assert.assertEquals(MESSAGE_VALUE, frm.getMessageField().getValue());
   }
+  
+  @Test
+  public void failTest(){
+	  Assert.fail("Expected to fail");
+  }
 }
