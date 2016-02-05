@@ -1,0 +1,27 @@
+input.disabled {
+/* 	background-color: transparent; */
+/* 	border-top: none; */
+/* 	border-right: none; */
+/* 	border-left: none; */
+/* 	border-radius: 0; */
+}
+
+.form-field {
+	
+	
+	&.mandatory{
+	  >label{
+/* 	    background: linear-gradient(to right, #efefef , transparent 20px); */
+/* 	    text-decoration: underline; */
+/* 	    font-weight: bold; */
+	  }
+	  .mandatory-indicator{
+/* 	    display: none; */
+	  }
+	
+	}
+}
+
+.messagebox {
+/* 	transform: rotate(15deg); */
+}

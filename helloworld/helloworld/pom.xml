@@ -22,7 +22,8 @@
 		<com.bsiag.edu.helloworld.helloworld.version>${project.version}</com.bsiag.edu.helloworld.helloworld.version>
 		<jdk.source.version>1.8</jdk.source.version>
 		<org.eclipse.scout.rt_version>5.2.0.M4</org.eclipse.scout.rt_version>
-        <sonar.jacoco.reportPath>${master_coverage_jacoco_destFile}</sonar.jacoco.reportPath>
+		<apache.derby.version>10.11.1.1</apache.derby.version>
+		<sonar.jacoco.reportPath>${master_coverage_jacoco_destFile}</sonar.jacoco.reportPath>
 	</properties>
 
 	<modules>
@@ -65,6 +66,12 @@
 				<groupId>com.bsiag.edu.helloworld</groupId>
 				<artifactId>helloworld.ui.html</artifactId>
 				<version>${com.bsiag.edu.helloworld.helloworld.version}</version>
+			</dependency>
+			<!-- Other dependencies -->
+			<dependency>
+				<groupId>org.apache.derby</groupId>
+				<artifactId>derby</artifactId>
+				<version>${apache.derby.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
